@@ -9,6 +9,11 @@ $font-family: 'Arial', sans-serif;
     margin: auto;
     align-items: center;
 
+    @media (max-width: 768px) { // For tablets and smaller devices
+        width: 100%;
+        padding: 10px;
+    }
+
 }
 
 .title-bar {
