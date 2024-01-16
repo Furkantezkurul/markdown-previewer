@@ -1,14 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-class Editor extends React.Component {
-    render(){
-        return(
-         
-         <textarea id="editor">
-            This will be the editor
-         </textarea>
-        );
-    }
+
+const Editor = ({ onChange, markdown }) => {
+    return (
+        
+        <textarea id="editor" onChange={onChange} value={markdown}>
+            {/* The editor will display the markdown text */}
+        </textarea>
+    );
 }
 
-export default Editor;
+const mapStateToProps = (state) => ({
+    markdown: state.markdown.markdown
+});
+
+export default connect(mapStateToProps)(Editor);

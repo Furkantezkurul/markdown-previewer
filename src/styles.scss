@@ -11,6 +11,20 @@ $font-family: 'Arial', sans-serif;
 
 }
 
+.title-bar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px; /* Adjust as needed */
+    font-family: $font-family;
+    text-align: left;
+}
+
+.editor-section, .preview-section {
+    margin-bottom: 20px;
+}
+
 #editor {
   overflow-y: scroll;
   width: 600px; /* Adjust the width as needed */
@@ -24,17 +38,17 @@ $font-family: 'Arial', sans-serif;
 }
 
 #preview {
-  width: 700px; /* Adjust the width as needed, wider than #editor */
-  height: 1000px;
-  margin: 20px;
-  background-color: $background-color;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  font-family: $font-family;
-  font-size: 16px; /* Adjust the font size as needed */
-  text-align: left;
-}
+    width: 700px; // Adjust the width as needed, wider than #editor
+    min-height: 700px; // Minimum height to start with
+    background-color: $background-color;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-family: $font-family;
+    font-size: 16px; // Adjust the font size as needed
+    text-align: left;
+    overflow-y: auto; // Allows scrolling if the content exceeds the viewport height
+  }
 
 /* Additional styling for a modern look */
 #editor textarea {
@@ -46,4 +60,29 @@ $font-family: 'Arial', sans-serif;
   outline: none;
   background: transparent;
 }
+
+#preview h1 {
+    font-size: 2em;
+}
+
+#preview h2 {
+    font-size: 1.5em;
+}
+
+#preview code {
+    background-color: #f4f4f4;
+    padding: 2px;
+}
+
+#preview table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#preview th, #preview td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+
 
